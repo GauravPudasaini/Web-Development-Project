@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="myForm">
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <button type="submit" onclick="redirect()">Submit</button>
+  </form>
+</body>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+  import { getDatabase, ref, onValue, set, get, child, push, update, remove } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+  // Import the Firebase SDK
+
+  // Initialize Firebase app
+  const firebaseConfig = {
+    apiKey: "AIzaSyBIw8qCf-d8AOV67oO7ZCXnNXgGQA7nj9w",
+    authDomain: "test-7815b.firebaseapp.com",
+    databaseURL: "https://test-7815b-default-rtdb.firebaseio.com",
+    projectId: "test-7815b",
+    storageBucket: "test-7815b.appspot.com",
+    messagingSenderId: "325689833090",
+    appId: "1:325689833090:web:25bb169ff7c3eb8e16a69b"
+  };
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const db = getDatabase();
+
+  // Get a reference to the Cart and Order nodes in your Realtime Database
+  const cartRef = ref(getDatabase(app), 'Cart');
+  const orderRef = ref(getDatabase(app), 'Order');
+
+  onValue(cartRef, (snapshot) => {
+    const cartData = snapshot.val();
+    const Cart_uid = Object.keys(cartData)[0];
+
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const address = document.getElementById("address");
+      const phone = document.getElementById("phone");
+
+      const deliveryData = {
+        Address: address.value,
+        Phone_No: phone.value
+      };
+
+      // Copy the contents of the Cart node to the Order node
+      // set(orderRef, {
+      //   ...cartData,
+      //   delivery: deliveryData
+      // }, (error) => {
+      //   if (error) {
+      //     console.error('Error copying data:', error);
+      //   } else {
+      //     console.log('Data copied successfully!');
+      //   }
+      // });
+
+
+      // const dbref = ref(db);
+      // get(child(dbref, "temp_user")).then((snapshot) => {
+      //   if (snapshot.exists()) {
+      //     var uid = snapshot.val().UserID;
+      //     get(child(dbref, "Cart/"+uid)).then((snapshot) => {
+      //       if (snapshot.exists()) {
+
+      //       } else {
+      //         alert("No Data Found");
+      //       }
+      //     })
+      //       .catch((error) => {
+      //         alert("Unsuccessful, error: " + error);
+      //       });
+      //   } else {
+      //     alert("No Data Found");
+      //   }
+      // })
+      //   .catch((error) => {
+      //     alert("Unsuccessful, error: " + error);
+      //   });
+
+      // Get a reference to the Cart and Order nodes in your Realtime Database
+      const cartRef = ref(getDatabase(app), 'Cart');
+      const orderRef = ref(getDatabase(app), 'Order');
+
+      onValue(cartRef, (snapshot) => {
+        const cartData = snapshot.val();
+        const uid = Object.keys(cartData)[0];
+
+        const productsData = {};
+        Object.entries(cartData[uid]).forEach(([productName, productData]) => {
+          if (productName !== 'Total') {
+            productsData[productName] = productData;
+          }
+        });
+
+        // Set the products under 'Products' in the Order table
+        update(child(orderRef, uid + '/Products'), productsData, (error) => {
+          if (error) {
+            console.error('Error copying data:', error);
+          } else {
+            console.log('Data copied successfully!');
+          }
+
+        });
+        update(child(orderRef, uid), {
+          Delivery: deliveryData
+        });
+
+      });
+
+      remove(cartRef, (error) => {
+        if (error) {
+          console.error('Error deleting Cart:', error);
+        } else {
+          console.log('Cart deleted successfully!');
+        }
+      });
+      alert("Order has been placed");
+
+    });
+  });
+</script>
+
+<script>
+  function redirect() {
+    window.setTimeout(function () {
+
+      // Move to a new location or you can do something else
+      window.location.href = "../cus_index.html";
+
+    }, 5000);
+  }
+</script>
+
+</html>

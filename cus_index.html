@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-nx3qW3jA3mSbS+I1M9px8WnGyKv4k4m4TkxQsNtKZnzsQ/qRRtGNysdjwu9z/WJNpk/AMCwTxE/IOpq+T3qfcA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/style.js"></script>
+
+
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap" rel="stylesheet">
+    <!-- ---- -->
+    <title>AD Organics</title>
+    <link rel="icon" type="favicon" href="image/ficon.png ">
+
+</head>
+
+<body>
+    <section>
+        <nav class="navbar fixed-top navbar-expand-lg bg-transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 pt-2">
+                        <div class="logostyle">
+                            <a class="navbar-brand" href="index.html">
+                                <img id="logo-dark" src="image/loo.png" alt="Dark logo">
+                                <img id="logo-light" src="image/loo1.png" alt="Light logo"> </a>
+                        </div>
+                    </div>
+                    <div class="col-9 d-flex pt-2">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
+                            <div class="input-group">
+                                <span class="border-success input-group-text bg-success text-white"><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control border-success" style="color:#7a7a7a">
+                                <button class="btn btn-success text-white">Search</button>
+                            </div>
+                        </div>
+                        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav ms-auto  hov-green">
+                                <li class="nav-item ">
+                                    <a class="nav-link  text-uppercase mx-2 " href="#">Offers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  text-uppercase mx-2" href="#">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  text-uppercase mx-2" href="#">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  text-uppercase mx-2" href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto ">
+                                <li class="nav-item hov-green">
+                                    <a class="nav-link  text-uppercase mx-2" href="./html/kart.html"><i
+                                            class="fa-solid fa-cart-shopping" style="color: #06981f;">KART</i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button" class="btn btn-warning" id="logout">logout</button>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- parallax -->
+
+        <div class="parallax" id="#dark-section">
+            <div class="parallax-text">
+                <h1>AD Organics</h1>
+                <p>We'll deliver everything you need. BUT ORGANIC!</p>
+                <a href="shop.html"><button type="button" class="btn btn-success">SHOP NOW</button></a>
+            </div>
+
+        </div>
+    </section>
+    <section id="dark-section">
+        <!-- offers -->
+        <div class="offers py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="deals d-flex my-4">
+                        <h2>Special Deals</h2>
+                        <p>Special weekly deals on AD organics orginal items</p>
+                        <div class="container py-5">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-3 mb-4 mb-lg-0">
+                                    <div class="card">
+                                        <img src="image/items/pump-seed.jpg" class="card-img-top" alt="Pumpkin Seed" />
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h3 class="card-title">Pumpkin Seed</h3>
+                                                <h5 class="card-text text-danger"><s>Rs.300/kg</s></h5>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h3 class=" card-text text-success">Offer</h3>
+                                                <h5 class="card-text text-success mb-0">Rs.250/kg</h5>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h3 class=" card-text text-success">KG</h3>
+                                                <select id="pumpkilo">
+                                                    <option value="1">0</option>
+                                                    <option value="1">1</option>
+                                                    <option vaule="2">2</option>
+                                                    <option vaule="3">3</option>
+                                                    <option vaule="4">4</option>
+                                                    <option vaule="5">5</option>
+                                                    <option vaule="6">6</option>
+                                                    <option vaule="7">7</option>
+                                                    <option vaule="8">8</option>
+                                                    <option vaule="9">9</option>
+                                                    <option vaule="10">10</option>
+                                                </select><br><br>
+                                            </div>
+
+                                            <button type="button" class="btn btn-warning" id="pumpBut">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-4 mb-lg-0">
+                                    <div class="card">
+                                        <img src="image/items/rice.jpg" class="card-img-top" alt="Rice" />
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h3 class="card-title">Rice</h3>
+                                                <h5 class="card-text text-danger"><s>Rs.400/kg</s></h4>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h3 class=" card-text text-success">Offer</h3>
+                                                <h5 class="card-text text-success mb-0">Rs.310/kg</h5>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h3 class=" card-text text-success">KG</h3>
+                                                <select id="ricekilo">
+                                                    <option value="1">0</option>
+                                                    <option value="1">1</option>
+                                                    <option vaule="2">2</option>
+                                                    <option vaule="3">3</option>
+                                                    <option vaule="4">4</option>
+                                                    <option vaule="5">5</option>
+                                                    <option vaule="6">6</option>
+                                                    <option vaule="7">7</option>
+                                                    <option vaule="8">8</option>
+                                                    <option vaule="9">9</option>
+                                                    <option vaule="10">10</option>
+                                                </select><br><br>
+                                            </div>
+
+                                            <button type="button" class="btn btn-warning" id="riceBut">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-4 mb-lg-0">
+                                    <div class="card">
+                                        <img src="image/items/maize.jpg" class="card-img-top" alt="MAKAI" />
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h3 class="card-title">Maize</h3>
+                                                <h5 class="card-text text-danger"><s>Rs.200/kg</s></h4>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h3 class=" card-text text-success">Offer</h3>
+                                                <h5 class="card-text text-success mb-0">Rs.150/kg</h5>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h3 class=" card-text text-success">KG</h3>
+                                                <select id="maizekilo">
+                                                    <option value="1">0</option>
+                                                    <option value="1">1</option>
+                                                    <option vaule="2">2</option>
+                                                    <option vaule="3">3</option>
+                                                    <option vaule="4">4</option>
+                                                    <option vaule="5">5</option>
+                                                    <option vaule="6">6</option>
+                                                    <option vaule="7">7</option>
+                                                    <option vaule="8">8</option>
+                                                    <option vaule="9">9</option>
+                                                    <option vaule="10">10</option>
+                                                </select><br><br>
+                                            </div>
+
+                                            <button type="button" class="btn btn-warning" id="maizeBut">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-3 mb-4 mb-lg-0">
+                                    <div class="card">
+                                        <img src="image/items/beans.jpg" class="card-img-top" alt="Geda Gudi" />
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h3 class="card-title">Beans</h3>
+                                                <h5 class="card-text text-danger"><s>Rs.350/kg</s></h4>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h3 class=" card-text text-success">Offer</h3>
+                                                <h5 class="card-text text-success mb-0">Rs.310/kg</h5>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <h3 class=" card-text text-success">KG</h3>
+                                                <select id="beanskilo">
+                                                    <option value="1">0</option>
+                                                    <option value="1">1</option>
+                                                    <option vaule="2">2</option>
+                                                    <option vaule="3">3</option>
+                                                    <option vaule="4">4</option>
+                                                    <option vaule="5">5</option>
+                                                    <option vaule="6">6</option>
+                                                    <option vaule="7">7</option>
+                                                    <option vaule="8">8</option>
+                                                    <option vaule="9">9</option>
+                                                    <option vaule="10">10</option>
+                                                </select><br><br>
+                                            </div>
+
+                                            <button type="button" class="btn btn-warning" id="beansBut">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="category align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="deals d-flex my-4">
+                        <h2>Shop by Caterogy</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="catimg mb-1">
+                        <img src="image/items/dryfruits.jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="catimg mb-1">
+                        <img src="image/items/fruits.jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="catimg mb-1">
+                        <img src="image/items/vegetables.jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="catimg mb-1">
+                        <img src="image/items/our.jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+        <!-- --- -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #4bb53f">
+        <!-- Grid container -->
+        <div class="container">
+            <!-- Section: Links -->
+            <section class="mt-5">
+                <!-- Grid row-->
+                <div class="row text-center d-flex justify-content-center pt-5">
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="#" class="text-white">About us</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="#" class="text-white">Shop</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="#" class="text-white">FAQs</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="#" class="text-white">Contact Us</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="mb-3" />
+
+            <!-- Section: Text -->
+            <section class="mb-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p>
+                            Remember us for organics daily products. AD ORGANICS
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Social -->
+            <section class="text-center mb-5">
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </section>
+            <!-- Section: Social -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright AD Oranics by
+            <a class="text-white" href="https://alexligal.com.np">Team</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBIw8qCf-d8AOV67oO7ZCXnNXgGQA7nj9w",
+        authDomain: "test-7815b.firebaseapp.com",
+        databaseURL: "https://test-7815b-default-rtdb.firebaseio.com",
+        projectId: "test-7815b",
+        storageBucket: "test-7815b.appspot.com",
+        messagingSenderId: "325689833090",
+        appId: "1:325689833090:web:25bb169ff7c3eb8e16a69b"
+    };
+    const app = initializeApp(config);
+
+    import { getDatabase, ref, set, get, child, update, remove }
+        from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+
+    const db = getDatabase();
+    const auth = getAuth();
+
+    function InsertData_Pumpkin(type, rate, kilo) {
+        var type = "Pumpkin";
+        var rate = 250;
+        var kilo = document.getElementById("pumpkilo");
+        var total = parseInt(kilo.value) * rate;
+        const dbref = ref(db);
+
+        get(child(dbref, "temp_user")).then((snapshot) => {
+            if (snapshot.exists()) {
+                var uid = snapshot.val().UserID;
+
+                set(ref(db, "Cart/" + uid + "/" + type), {
+                    Kilogram: parseInt(kilo.value),
+                    Rate: rate,
+                    Total: total
+                })
+                    .then(() => {
+                        alert("order placed successfully");
+                    })
+                    .catch((error) => {
+                        alert("unsucessful, error" + error);
+                    });
+            } else {
+                alert("No Data Found");
+            }
+        })
+            .catch((error) => {
+                alert("Unsuccessful, error: " + error);
+            });
+    }
+
+    function InsertData_Rice(type, rate, kilo) {
+        var type = "Rice";
+        var rate = 310;
+        var kilo = document.getElementById("ricekilo");
+        var total = parseInt(kilo.value) * rate;
+        const dbref = ref(db);
+
+        get(child(dbref, "temp_user")).then((snapshot) => {
+            if (snapshot.exists()) {
+                var uid = snapshot.val().UserID;
+
+                set(ref(db, "Cart/" + uid + "/" + type), {
+                    Kilogram: parseInt(kilo.value),
+                    Rate: rate,
+                    Total: total
+                })
+                    .then(() => {
+                        alert("order placed successfully");
+                    })
+                    .catch((error) => {
+                        alert("unsucessful, error" + error);
+                    });
+            } else {
+                alert("No Data Found");
+            }
+        })
+            .catch((error) => {
+                alert("Unsuccessful, error: " + error);
+            });
+    }
+
+    function InsertData_Maize(type, rate, kilo) {
+        var type = "Maize";
+        var rate = 150;
+        var kilo = document.getElementById("maizekilo");
+        var total = parseInt(kilo.value) * rate;
+        const dbref = ref(db);
+
+        get(child(dbref, "temp_user")).then((snapshot) => {
+            if (snapshot.exists()) {
+                var uid = snapshot.val().UserID;
+
+                set(ref(db, "Cart/" + uid + "/" + type), {
+                    Kilogram: parseInt(kilo.value),
+                    Rate: rate,
+                    Total: total
+                })
+                    .then(() => {
+                        alert("order placed successfully");
+                    })
+                    .catch((error) => {
+                        alert("unsucessful, error" + error);
+                    });
+            } else {
+                alert("No Data Found");
+            }
+        })
+            .catch((error) => {
+                alert("Unsuccessful, error: " + error);
+            });
+    }
+
+    function InsertData_Beans(type, rate, kilo) {
+        var type = "Beans";
+        var rate = 310;
+        var kilo = document.getElementById("beanskilo");
+        var total = parseInt(kilo.value) * rate;
+        const dbref = ref(db);
+
+        get(child(dbref, "temp_user")).then((snapshot) => {
+            if (snapshot.exists()) {
+                var uid = snapshot.val().UserID;
+
+                set(ref(db, "Cart/" + uid + "/" + type), {
+                    Kilogram: parseInt(kilo.value),
+                    Rate: rate,
+                    Total: total
+                })
+                    .then(() => {
+                        alert("order placed successfully");
+                    })
+                    .catch((error) => {
+                        alert("unsucessful, error" + error);
+                    });
+            } else {
+                alert("No Data Found");
+            }
+        })
+            .catch((error) => {
+                alert("Unsuccessful, error: " + error);
+            });
+    }
+
+    pumpBut.addEventListener('click', InsertData_Pumpkin);
+    riceBut.addEventListener('click', InsertData_Rice);
+    maizeBut.addEventListener('click', InsertData_Maize);
+    beansBut.addEventListener('click', InsertData_Beans);
+
+    function redirect() {
+        window.setTimeout(function () {
+
+            // Move to a new location or you can do something else
+            window.location.href = "index.html"
+
+        }, 2000);
+    }
+
+    logout.addEventListener('click', (e) => {
+
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            alert('user loged out');
+
+            // Get a reference to the Cart node in your Realtime Database
+            const cartRef = ref(getDatabase(app), 'Cart');
+            const tempUser = ref(getDatabase(app), 'temp_user');
+            // Delete the Cart node
+            remove(cartRef, (error) => {
+                if (error) {
+                    console.error('Error deleting Cart:', error);
+                } else {
+                    console.log('Cart deleted successfully!');
+                }
+            });
+            remove(tempUser, (error) => {
+                if (error) {
+                    console.error('Error deleting temp user:', error);
+                } else {
+                    console.log('Temp user deleted successfully!');
+                }
+            });
+            redirect();
+        }).catch((error) => {
+            // An error happened.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            alert(errorMessage);
+        });
+
+    });
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src="js/shop.js" defer></script>
+
+</html>

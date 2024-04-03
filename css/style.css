@@ -1,0 +1,134 @@
+a {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body {
+    background: #E8EDE6;
+}
+
+.superNav {
+    font-size: 13px;
+}
+
+.jcont-center {
+    justify-content: center;
+}
+
+.logostyle a img {
+    width: 70%;
+}
+
+#logo-dark {
+    display: none;
+}
+
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+@media screen and (max-width:540px) {
+    .centerOnMobile {
+        text-align: center
+    }
+}
+
+.hov-green a {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Arvo', serif; */
+}
+
+
+/* .hov-green a:hover {
+    color: rgb(45, 214, 45);
+} */
+
+.parallax {
+    text-align: left;
+    color: var(--color);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1626697556426-8a55a8af4999?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    /*  this is where the magic happens:  */
+    background-attachment: fixed;
+}
+
+.parallax-text {
+    padding-top: 25%;
+    margin-left: 10%;
+    font-family: 'Lato', sans-serif;
+}
+
+.parallax-text h1 {
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.parallax-text p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.offers {
+    background: #f9f9f1;
+    min-height: 500px;
+}
+
+.deals {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.deals a {
+    text-decoration: none;
+}
+
+.deals h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2DD62D;
+}
+
+.deals p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.cardimg {
+    height: 350px;
+    width: 350px;
+}
+
+.cardimg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.category .card img {
+    height: 20%;
+    width: 100%;
+}
+
+.catimg img {
+    width: auto;
+    height: 75%;
+}
+
+
+/* .deals .card img {
+    max-height: 300px;
+    width: auto;
+} */

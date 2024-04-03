@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Display Firebase DB in Table</title>
+    <!-- Firebase SDK -->
+
+    
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        
+        import { getDatabase, ref, get }
+        from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+        // Firebase Config
+        var firebaseConfig = {
+            apiKey: "AIzaSyBIw8qCf-d8AOV67oO7ZCXnNXgGQA7nj9w",
+            authDomain: "test-7815b.firebaseapp.com",
+            databaseURL: "https://test-7815b-default-rtdb.firebaseio.com",
+            projectId: "test-7815b",
+            storageBucket: "test-7815b.appspot.com",
+            messagingSenderId: "325689833090",
+            appId: "1:325689833090:web:25bb169ff7c3eb8e16a69b"
+        };
+
+        // Initialize Firebase App
+        const app = initializeApp(firebaseConfig);
+
+        const db = getDatabase();
+
+        var ordersRef = ref(db, 'Cart');
+
+        // Get the table element in your HTML code where you want to display the order data
+        var table = document.getElementById('order-table');
+
+        get(ordersRef).then((snapshot) => {
+            var orders = snapshot.val();
+
+            // Loop through the orders and generate the HTML code for each row
+            for (var orderKey in orders) {
+                var order = orders[orderKey];
+                for (var itemKey in order) {
+                    var item = order[itemKey];
+
+                    var row = table.insertRow();
+
+                    var nameCell = row.insertCell();
+                    nameCell.innerHTML = itemKey;
+
+                    var kilogramCell = row.insertCell();
+                    kilogramCell.innerHTML = item.Kilogram;
+
+                    var rateCell = row.insertCell();
+                    rateCell.innerHTML = item.Rate;
+
+                    var totalCell = row.insertCell();
+                    totalCell.innerHTML = item.Total;
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Kilogram</th>
+                <th>Rate</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="order-table">
+        </tbody>
+    </table>
+
+    <a href="chexkoutfr.html"><button type="button" class="btn btn-warning" id="proceed">PROCEED</button></a>
+</body>
+
+</html>
